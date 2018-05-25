@@ -32,5 +32,74 @@ public class Portefeuille extends Exception
     {
         hInstrument=new HashMap<>();
         hInstrument.put(x,i);
+<<<<<<< HEAD
     } 
+=======
+    }
+    public Fonds rechercherFonds(String cle){
+        
+        boolean x = hFonds.containsKey(cle);
+        
+        Fonds f = null;
+        
+        try
+        {
+            if(x==false)
+            {
+                
+                throw new Exception ("FondsInexistant");
+            }
+        }
+        catch(Exception e)
+        {
+            f = hFonds.get(cle);
+           
+        } 
+        return f;
+    }
+    
+    public Instrument rechercherInstrument(String cle){
+        
+        boolean x = hInstrument.containsKey(cle);
+        
+        Instrument I =null;
+        
+        try
+        {
+            if(x==false)
+            {
+                
+                throw new Exception ("InstrumentInexistant");
+            }
+        }
+        catch(Exception e)
+        {
+            I = hInstrument.get(cle);
+        } 
+        return I ;
+    }
+ 
+    public void ajouterFond(String x, double a)
+    {
+        try
+        {
+            if(hFonds.get(x)!=null)
+            {
+                throw new Exception("FondsExistant");
+            }
+        }
+        catch(Exception e)
+        {
+            Fonds f = new Fonds(a);
+            hFonds.put(x,f);
+        }
+        
+    }
+    
+    public void ajouterInstrument(String x, Fonds f)
+    {
+        Instrument i = hInstrument.get(x);
+        i.ajouter(f);
+    }
+>>>>>>> ff8be163c5cb4915a986aa740dfdec55b090317e
 }
