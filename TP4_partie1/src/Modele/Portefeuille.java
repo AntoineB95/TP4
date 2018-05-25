@@ -34,4 +34,35 @@ public class Portefeuille
         hInstrument=new HashMap<>();
         hInstrument.put(x,i);
     }
+    public Fonds rechercherFonds(String cle){
+        boolean x = hFonds.containsKey(cle);
+        Fonds f = null;
+        try{
+            if(x==false){
+                
+                throw new Exception ("FondsInexistant");
+            }
+        }
+        catch(Exception e)
+        {
+        f = hFonds.get(cle);
+           
+        } 
+        return f;
+    }
+    public Instrument rechercherInstrument(String cle){
+        boolean x = hInstrument.containsKey(cle);
+        Instrument I =null;
+        try{
+            if(x==false){
+                
+                throw new Exception ("InstrumentInexistant");
+            }
+        }
+        catch(Exception e)
+        {
+            I = hInstrument.get(cle);
+        } 
+        return I ;
+    }
 }
