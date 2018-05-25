@@ -98,4 +98,31 @@ public class Portefeuille extends Exception
         Instrument i = hInstrument.get(x);
         i.ajouter(f);
     }
+    
+    public void SupprimerFonds(String cle){
+        Fonds f =rechercherFonds(cle);
+        if(f==null)
+        {
+            System.out.println("ERREUR : Le fonds n'existe pas");
+        }
+        else
+        {
+            hFonds.remove(cle);
+        }
+    }
+    
+    public void SupprimerInstrument(String cle)
+    {
+        
+        Instrument I =rechercherInstrument(cle);
+        
+        if(I==null)
+        {
+            System.out.println("ERREUR : L' instrument n'existe pas");
+        }
+        else
+        {
+            hInstrument.remove(cle);
+        }
+    }
 }
