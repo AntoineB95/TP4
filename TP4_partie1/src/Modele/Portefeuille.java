@@ -46,10 +46,14 @@ public class Portefeuille extends Exception
                 
                 throw new Exception ("FondsInexistant");
             }
+            else
+            {
+                f = hFonds.get(cle);
+            }
         }
         catch(Exception e)
         {
-            f = hFonds.get(cle);
+            System.out.println("Fond inexistant");
            
         } 
         return f;
@@ -68,10 +72,14 @@ public class Portefeuille extends Exception
                 
                 throw new Exception ("InstrumentInexistant");
             }
+            else
+            {
+                I = hInstrument.get(cle);
+            }
         }
         catch(Exception e)
         {
-            I = hInstrument.get(cle);
+            System.out.println("Instrument inexistant");
         } 
         return I ;
     }
@@ -80,7 +88,11 @@ public class Portefeuille extends Exception
     {
         try
         {
-            if(hFonds.get(x)!=null)
+            if(hFonds.get(x)==null)
+            {
+                System.out.println("Fond existant");
+            }
+            else
             {
                 throw new Exception("FondsExistant");
             }
