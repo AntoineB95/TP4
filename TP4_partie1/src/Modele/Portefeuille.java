@@ -32,9 +32,6 @@ public class Portefeuille extends Exception
     {
         hInstrument=new HashMap<>();
         hInstrument.put(x,i);
-<<<<<<< HEAD
-    } 
-=======
     }
     public Fonds rechercherFonds(String cle){
         
@@ -101,5 +98,4 @@ public class Portefeuille extends Exception
         Instrument i = hInstrument.get(x);
         i.ajouter(f);
     }
->>>>>>> ff8be163c5cb4915a986aa740dfdec55b090317e
 }
