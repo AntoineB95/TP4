@@ -10,19 +10,28 @@ import java.util.*;
  *
  * @author Feray Beaumont
  */
-public class Portefeuille {
+public class Portefeuille 
+{
     
     public HashMap<String, Fonds> hFonds;
     
     public HashMap<String, Instrument> hInstrument;
     
-    public Portefeuille(){
+    public Portefeuille()
+    {
         hFonds=new HashMap<>();
         hInstrument=new HashMap<>();
     }
     
-    public Portefeuille(String x, String y){
-        hFonds=new HashMap<x, Fonds>();
-        hInstrument=new HashMap<y, Instrument>();
+    public Portefeuille(String x, Fonds f)
+    {
+        hFonds=new HashMap<>();
+        hFonds.put(x,f);
+    }
+    
+    public Portefeuille(String x, Instrument i)
+    {
+        hInstrument=new HashMap<>();
+        hInstrument.put(x,i);
     }
 }
