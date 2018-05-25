@@ -22,6 +22,18 @@ public class Test
         String str = sc.nextLine();
         System.out.println("Vous avez saisi : " + str);
         
-        p.rechercherFonds(str);
+        double a=p.rechercherFonds(str);
+        if(a==null)
+        {
+            System.out.println("Veuillez saisir le montant du fond");
+            Scanner sc2 = new Scanner(System.in);
+            double m = sc2.nextDouble();
+            p.ajouterFond(str,m);
+            System.out.println("Clé : " + str + "Montant : " + m);            
+        }
+        else
+        {
+            System.out.println("Clé : " + str + "Montant : " + a);
+        }
     }
 }

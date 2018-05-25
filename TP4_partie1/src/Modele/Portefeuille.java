@@ -33,7 +33,7 @@ public class Portefeuille extends Exception
         hInstrument=new HashMap<>();
         hInstrument.put(x,i);
     }
-    public Fonds rechercherFonds(String cle){
+    public double rechercherFonds(String cle){
         
         boolean x = hFonds.containsKey(cle);
         
@@ -56,7 +56,7 @@ public class Portefeuille extends Exception
             System.out.println("Fond inexistant");
            
         } 
-        return f;
+        return f.amount;
     }
     
     public Instrument rechercherInstrument(String cle){
@@ -111,7 +111,8 @@ public class Portefeuille extends Exception
         i.ajouter(f);
     }
     
-    public void SupprimerFonds(String cle){
+    public void SupprimerFonds(String cle)
+    {
         Fonds f =rechercherFonds(cle);
         if(f==null)
         {
