@@ -19,8 +19,12 @@ public class Instrument {
     }
     
     public Instrument(ArrayList<Fonds> tab){
-        for(i=0;i++){
-            
+        
+        for(int i=0;i<tab.size();i++){
+            aInstrument.add(tab.get(i)); 
         }
+    }
+    public void ajouter(Fonds f){
+        aInstrument.add(f);
     }
 }
