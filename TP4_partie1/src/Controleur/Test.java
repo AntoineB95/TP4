@@ -9,6 +9,10 @@ package Controleur;
  *
  * @author antoi
  */
-public class Test {
-    
+public class Test 
+{
+    static void main(String args[])
+    {
+        
+    }
 }
